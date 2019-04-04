@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { CardComponent } from './card/card.component';
+import { ProductsFilterPipe } from './products-filter.pipe';
 
 // Module / directives/ pipes/ services
 // Module-> es6 module
@@ -11,7 +13,9 @@ import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent,
+    ProductsFilterPipe
   ],
   imports: [
     BrowserModule
