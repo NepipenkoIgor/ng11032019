@@ -1,10 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { CardComponent } from './card/card.component';
-import { ProductsFilterPipe } from './products-filter.pipe';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {CardComponent} from './card/card.component';
+import {ProductsFilterPipe} from './products-filter.pipe';
+import {TooltipDirective} from './common/directives/tooltip.directive';
+import {ProductsService} from './products.service';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {environment} from '../environments/environment';
+import {BASE_URL, BASE_URL_TOKEN} from './config';
+import {CustomInterceptorService} from './common/services/custom-interceptor.service';
 
 // Module / directives/ pipes/ services
 // Module-> es6 module
@@ -15,12 +21,20 @@ import { ProductsFilterPipe } from './products-filter.pipe';
     AppComponent,
     HeaderComponent,
     CardComponent,
-    ProductsFilterPipe
+    ProductsFilterPipe,
+    TooltipDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ProductsService,
+    {provide: BASE_URL_TOKEN, useValue: BASE_URL},
+    {provide: 'BASE_URL', useValue: 'localhost'},
+    {provide: HTTP_INTERCEPTORS, useClass: CustomInterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

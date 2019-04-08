@@ -1,13 +1,16 @@
 <div class="col-lg-4">
   <div class="catalogItem">
     <div class="catalogItem__img">
-      <img [src]="makeUrl(internalProduct.img)" alt="Обои">
+      <img [src]="makeUrl(internalProduct.img)" alt="Обои"  (mouseenter)="t.show()" (mouseleave)="t.hide()">
     </div>
     <div class="catalogItem__name"  [ngClass]="{background: isOdd}">{{internalProduct.title}}</div>
     <div class="catalogItem__brand">Бренд: <strong>{{internalProduct.author}}</strong></div>
     <div class="catalogItem__code">Артикул: 1045</div>
-    <div class="catalogItem__prices">Цена: <strong>{{internalProduct.price}}</strong>
-      <span class="tooltiptext open">Эквив. ~ 150$</span>
+    <div class="catalogItem__prices"
+         [appTooltip]="internalProduct.price"
+         #t="tooltip"
+    >Цена: <strong>{{internalProduct.price}}</strong>
+<!--      <span class="tooltiptext open">Эквив. ~ 150$</span>-->
     </div>
     <button class="catalogItem__btn">Заказать</button>
   </div>

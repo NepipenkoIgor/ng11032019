@@ -1,12 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
 import {IProduct} from '../mock/products';
+import {TooltipDirective} from '../common/directives/tooltip.directive';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent implements OnInit, AfterViewInit {
 
   @Input()
   public set product(product: IProduct) {
@@ -23,12 +24,20 @@ export class CardComponent implements OnInit {
   @Input()
   public isOdd: number;
 
+  @ViewChild('t', {read: TooltipDirective})
+  public tooltip: TooltipDirective;
+
   public internalProduct: IProduct;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(): void {
+    // console.log(this.tooltip);
+    // setTimeout(() => this.tooltip.show(), 1000);
   }
 
   public makeUrl(src: string): string {
