@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngIf="products$ | async as products; else loading">
+      <app-card *ngFor="let product of products | productsFilter:searchText; index as i; odd as isOdd"
+                [product]="product"
+                [index]="i+1"
+                [isOdd]="isOdd"
+      ></app-card>
+    </ng-container>
+  </div>
+</div>
+<ng-template #loading>
+  ..... loading
+</ng-template>

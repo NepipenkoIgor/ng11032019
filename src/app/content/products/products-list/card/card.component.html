@@ -1,7 +1,10 @@
 <div class="col-lg-4">
   <div class="catalogItem">
     <div class="catalogItem__img">
-      <img [src]="makeUrl(internalProduct.img)" alt="Обои"  (mouseenter)="t.show()" (mouseleave)="t.hide()">
+      <img [src]="makeUrl(internalProduct.img)" alt="Обои"
+           [routerLink]="[internalProduct.id]"
+           (mouseenter)="t.show()"
+           (mouseleave)="t.hide()">
     </div>
     <div class="catalogItem__name"  [ngClass]="{background: isOdd}">{{internalProduct.title}}</div>
     <div class="catalogItem__brand">Бренд: <strong>{{internalProduct.author}}</strong></div>

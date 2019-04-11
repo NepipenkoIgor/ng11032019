@@ -3,19 +3,13 @@
     <img [src]="logo" class="logo" alt="logo">
   </ng-template>
 </app-header>
-<section class="main">
-  <div class="container">
-    <div class="row">
-      <ng-container *ngIf="products$ | async as products; else loading">
-        <app-card *ngFor="let product of products | productsFilter:searchText; index as i; odd as isOdd"
-                  [product]="product"
-                  [index]="i+1"
-                  [isOdd]="isOdd"
-        ></app-card>
-      </ng-container>
-    </div>
-  </div>
-</section>
+
+<router-outlet></router-outlet>
+
+
+<!--<ng-container *ngFor="let type of hotels | makeMenu">-->
+<!--  <li>{{type}}</li>-->
+<!--</ng-container>-->
 
 
 <!--<ng-container *ngIf="products$ | async as products; else loading">-->
@@ -23,9 +17,7 @@
 <!--   <p> {{i+1}}. {{product.author}}</p>-->
 <!--  </ng-container>-->
 <!--</ng-container>-->
-<ng-template #loading>
-  ..... loading
-</ng-template>
+
 
 <!--<div [innerHTML]="getSafeHtml()"></div>-->
 

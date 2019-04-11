@@ -4,9 +4,9 @@
       <div class="col-lg-12">
         <div class="top-nav-wrap">
           <ul>
-            <li><a href="/auth.html">Авторизация</a></li>
-            <li><a href="/registration.html">Регистрация</a></li>
-            <li><a href="/orders.html">Мои заказы</a></li>
+            <li [routerLink]="['login']" routerLinkActive="active"><a>Авторизация</a></li>
+            <li [routerLink]="['registration']"><a>Регистрация</a></li>
+            <li (click)="goToProducts()"><a>Продукты</a></li>
           </ul>
         </div>
       </div>
