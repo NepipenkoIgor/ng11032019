@@ -18,6 +18,7 @@ import { ProductsListComponent } from './content/products/products-list/products
 import { OneProductComponent } from './content/products/one-product/one-product.component';
 import { ProductResolveService } from './content/products/one-product/product-resolve.service';
 import { CustomPreloadService } from './common/services/custom-preload.service';
+import { FormsModule } from '@angular/forms';
 
 // Module / directives/ pipes/ services
 // Module-> es6 module
@@ -38,6 +39,7 @@ import { CustomPreloadService } from './common/services/custom-preload.service';
     imports: [
         BrowserModule,
         HttpClientModule,
+        FormsModule,
         RouterModule.forRoot(routes, { preloadingStrategy: CustomPreloadService }),
     ],
     providers: [

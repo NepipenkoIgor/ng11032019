@@ -18,15 +18,15 @@ export class CardComponent implements OnInit, AfterViewInit {
     }
 
     @Input()
-    public index: number;
+    public index!: number;
 
     @Input()
-    public isOdd: number;
+    public isOdd!: number;
 
     @ViewChild('t', { read: TooltipDirective })
-    public tooltip: TooltipDirective;
+    public tooltip!: TooltipDirective;
 
-    public internalProduct: IProduct;
+    public internalProduct!: IProduct;
 
     constructor() {}
 

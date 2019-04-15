@@ -31,7 +31,7 @@ import { Router } from '@angular/router';
 // AfterContentChecked,
 export class HeaderComponent implements OnInit {
     @Input()
-    public logo: string;
+    public logo!: string;
 
     // @ContentChild('site_logo', {read: TemplateRef})
     // public logo: TemplateRef<any>;

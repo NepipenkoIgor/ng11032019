@@ -4,20 +4,26 @@
       <div class="col-lg-12">
         <div class="registration-wrapper">
           <h1>Авторизация</h1>
-          <form action="">
-            <label class="input-wrapper no-valid">
+          <form #f="ngForm">
+            <label class="input-wrapper " [ngClass]="{'no-valid': c.invalid }">
               <span>Ваше имя</span>
-              <input type="text">
-              <div class="valid-message">Введите корректное имя</div>
+              <input type="text"
+                     name="firstName"
+                     ngModel
+                     #c="ngModel"
+                     required minlength="5"
+              >
+              <div class="valid-message">{{c.errors | json}}</div>
             </label>
             <label class="input-wrapper">
               <span>Пароль</span>
-              <input type="password">
+              <input type="password" ngModel name="password">
             </label>
             <div class="btn-wrapper">
               <button>Зарегистрироваться</button>
             </div>
           </form>
+          <pre>{{f.valueChanges | async | json }}</pre>
         </div>
       </div>
     </div>

@@ -7,10 +7,9 @@ export class CustomPreloadService implements PreloadAllModules {
         return of(route).pipe(
             delay(5000),
             mergeMap((_: Route) => {
-                console.log(_.path === 'registration');
-                if (_.path === 'registration') {
-                    return;
-                }
+                // if (_.path === 'registration') {
+                //     return of(null);
+                // }
                 return fn();
             })
         );

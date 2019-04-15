@@ -8,7 +8,7 @@ import { IProduct } from '../products.service';
     styleUrls: ['./one-product.component.css'],
 })
 export class OneProductComponent implements OnInit {
-    public product: IProduct;
+    public product!: IProduct;
 
     constructor(private activatedRoute: ActivatedRoute) {}
 
