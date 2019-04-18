@@ -1,14 +1,7 @@
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable } from '@angular/core';
-
-export interface IProduct {
-    id: number;
-    title: string;
-    img: string;
-    price: number;
-    author: string;
-}
+import { Injectable } from '@angular/core';
+import { IProduct } from '../../store/reducers/products.reducers';
 
 @Injectable()
 export class ProductsService {

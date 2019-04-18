@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SignupComponent } from './signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SwitcherComponent } from './switcher/switcher.component';
 
 @NgModule({
-    declarations: [SignupComponent],
+    declarations: [SignupComponent, SwitcherComponent],
     imports: [
         CommonModule,
         // FormsModule,

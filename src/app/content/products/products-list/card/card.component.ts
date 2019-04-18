@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
-import { IProduct } from '../../products.service';
 import { TooltipDirective } from '../../../../common/directives/tooltip.directive';
+import { IProduct } from '../../../../store/reducers/products.reducers';
 
 @Component({
     selector: 'app-card',
