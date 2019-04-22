@@ -1,5 +1,4 @@
 import { GET_PRODUCTS_ERROR, GET_PRODUCTS_SUCCESS, ProductsActions } from '../actions/products.actions';
-import { Action } from '@ngrx/store';
 
 export interface IProduct {
     id: number;

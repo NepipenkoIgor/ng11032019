@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Data, Params } from '@angular/router';
-import { IProduct } from '../../../store/reducers/products.reducers';
+import { IProduct } from '../../../store/reducers/products.reducer';
 
 @Component({
     selector: 'app-one-product',

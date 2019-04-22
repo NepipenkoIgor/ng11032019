@@ -3,7 +3,7 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { ProductsService } from '../../content/products/products.service';
 import { GET_PRODUCTS_PENDING, GetProductsError, GetProductsSuccess } from '../actions/products.actions';
-import { IProduct } from '../reducers/products.reducers';
+import { IProduct } from '../reducers/products.reducer';
 import { of } from 'rxjs';
 
 @Injectable()

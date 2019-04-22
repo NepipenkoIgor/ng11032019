@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { IStore } from '../../../store';
-import { IProduct } from '../../../store/reducers/products.reducers';
+import { IProduct } from '../../../store/reducers/products.reducer';
 import { GetProductsPending } from '../../../store/actions/products.actions';
 
 @Component({

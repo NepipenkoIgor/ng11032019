@@ -26,6 +26,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { ProductsEffects } from './store/effects/products.effects';
 import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CartComponent } from './header/cart/cart.component';
+import { ProductComponent } from './header/cart/product/product.component';
 
 // Module / directives/ pipes/ services
 // Module-> es6 module
@@ -43,6 +45,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
         ProductsListComponent,
         OneProductComponent,
         NameValidatorDirective,
+        CartComponent,
+        ProductComponent,
     ],
     imports: [
         BrowserModule,
