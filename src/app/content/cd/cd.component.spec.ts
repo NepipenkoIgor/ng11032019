@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SwitcherComponent } from './switcher.component';
+import { CdComponent } from './cd.component';
 
-describe('SwitcherComponent', () => {
-    let component: SwitcherComponent;
-    let fixture: ComponentFixture<SwitcherComponent>;
+describe('CdComponent', () => {
+    let component: CdComponent;
+    let fixture: ComponentFixture<CdComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SwitcherComponent],
+            declarations: [CdComponent],
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SwitcherComponent);
+        fixture = TestBed.createComponent(CdComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

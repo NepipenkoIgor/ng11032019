@@ -12,8 +12,8 @@ export interface IStore {
 }
 
 // TODO  remove any !!!!!!!!!!;
-export const reducers: ActionReducerMap<IStore, ProductsActions> = {
+export const reducers: ActionReducerMap<IStore, any> = {
     products: productsReducer,
-    cart: cartReducer,
+    cart: cartReducer as any,
     user: userReducer,
 };

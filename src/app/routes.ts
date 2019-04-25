@@ -5,12 +5,17 @@ import { SigninComponent } from './content/signin/signin.component';
 import { ProductsListComponent } from './content/products/products-list/products-list.component';
 import { OneProductComponent } from './content/products/one-product/one-product.component';
 import { ProductResolveService } from './content/products/one-product/product-resolve.service';
+import { CdComponent } from './content/cd/cd.component';
 
 export const routes: Route[] = [
     {
         path: '',
         redirectTo: 'products',
         pathMatch: 'full',
+    },
+    {
+        path: 'cd',
+        component: CdComponent,
     },
     {
         path: 'products',

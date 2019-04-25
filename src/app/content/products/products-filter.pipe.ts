@@ -5,7 +5,7 @@ import { IProduct } from '../../store/reducers/products.reducer';
     name: 'productsFilter',
 })
 export class ProductsFilterPipe implements PipeTransform {
-    public transform(products: IProduct[], searchTerm: string): any {
+    public transform(products: IProduct[], searchTerm: string): IProduct[] {
         if (!searchTerm) {
             return products;
         }

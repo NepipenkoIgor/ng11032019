@@ -28,6 +28,9 @@ import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CartComponent } from './header/cart/cart.component';
 import { ProductComponent } from './header/cart/product/product.component';
+import { CdComponent } from './content/cd/cd.component';
+import { DefaultComponent } from './content/cd/default/default.component';
+import { OnPushComponent } from './content/cd/on-push/on-push.component';
 
 // Module / directives/ pipes/ services
 // Module-> es6 module
@@ -47,6 +50,9 @@ import { ProductComponent } from './header/cart/product/product.component';
         NameValidatorDirective,
         CartComponent,
         ProductComponent,
+        CdComponent,
+        DefaultComponent,
+        OnPushComponent,
     ],
     imports: [
         BrowserModule,
